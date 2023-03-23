@@ -10,7 +10,7 @@
 
 OS=$(uname)
 
-if [ $OS == "Linux"  ]; then PORTABLE_SED="sed -i ";
+if [ $OS == "Linux"  ]; then
     # Linux x64
     mkdir -p build/linux-x64 && cd build/linux-x64 && \
     ~/.Installation/Qt/$QT_VERSION/gcc_64/bin/qmake ../../qzxing.pro "CONFIG+=release" && \
