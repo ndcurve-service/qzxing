@@ -38,5 +38,5 @@ if [ $OS == "Linux"  ]; then
 fi
 
 if [ $OS == "Darwin" ]; then
-
+    echo "Darwin"
 fi
