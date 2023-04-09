@@ -38,5 +38,18 @@ if [ $OS == "Linux"  ]; then
 fi
 
 if [ $OS == "Darwin" ]; then
-    echo "Darwin"
+    # Mac
+    mkdir -p build/macos && cd build/macos && \
+    ~/Qt/$QT_VERSION/macos/bin/qmake ../../qzxing.pro "CONFIG+=release" && \
+    make
+    cd ../../
+    mkdir -p libs/macos && cp build/macos/libQZXing.a libs/macos/libQZXing.a
+
+    # iOS
+    mkdir -p build/ios && cd build/ios && \
+    ~/Qt/$QT_VERSION/ios/bin/qmake ../../qzxing.pro "CONFIG+=release" && \
+    make
+    cd ../../
+    mkdir -p libs/ios && cp build/ios/libQZXing.a libs/ios/libQZXing.a
+
 fi
