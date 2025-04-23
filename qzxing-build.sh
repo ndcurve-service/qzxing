@@ -2,7 +2,7 @@
 
 
  QT_VERSION=6.5.0
- ANDROID_NDK="/home/muneer/.Installation/android-sdk-linux/ndk/25.1.8937393"
+ ANDROID_NDK="/home/muneer/.Installation/android-sdk-linux/ndk/27.2.12479018"
 
 
  rm -rf build
